@@ -15,10 +15,10 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "frontend:build": "cd frontend && npm install && npm run build && npx cpx \"dist/**/*\" ../public",
+    "frontend:build": "cd frontend && npm install && npm run build && xcopy /E /I /Y dist ..\\public",
     "build": "npm run frontend:build && nest build",
-    "start:prod": "node dist/main",
-    "postinstall": "npm run build"
+    "start": "node dist/main",
+    "postinstall": "npm install && npm run build"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
