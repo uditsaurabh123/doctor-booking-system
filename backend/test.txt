@@ -1,0 +1,2 @@
+"frontend:build": "cd frontend && npm install && npm run build && cp -r dist/* ../public"
+"frontend:build": "cd frontend && npm install && npm run build && xcopy /E /I /Y dist ..\\public"
